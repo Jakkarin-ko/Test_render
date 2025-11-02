@@ -13,7 +13,7 @@ app.post('/api/logdata', (req, res) => {
     const receivedData = req.body; 
 
     console.log('--- Data received from Client ---');
-    console.log'Time received:', new Date().toISOString());
+    console.log('Time received:', new Date().toISOString());
     console.log('Data (JSON):', receivedData); 
     console.log('---------------------------------');
 
