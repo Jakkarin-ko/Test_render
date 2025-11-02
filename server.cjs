@@ -12,13 +12,13 @@ app.use(bodyParser.json());
 app.post('/api/logdata', (req, res) => {
     const receivedData = req.body; 
 
-    console.log('--- ข้อมูลที่ส่งมาจาก Client ---');
-    console.log('เวลาที่ได้รับ:', new Date().toISOString());
-    console.log('ข้อมูล (JSON):', receivedData); 
+    console.log('--- Data received from Client ---');
+    console.log'Time received:', new Date().toISOString());
+    console.log('Data (JSON):', receivedData); 
     console.log('---------------------------------');
 
     res.status(200).json({ 
-        message: 'ได้รับข้อมูลและบันทึกใน Log ของ Server',
+        message: 'Data received and logged in Server console',
         yourData: receivedData 
     });
 });
@@ -27,7 +27,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(buildPath, 'index.html')); 
 });
 
-// 6. Start Server
 app.listen(PORT, () => {
     console.log(`✅ Web Service Server กำลังทำงานที่ Port ${PORT}`);
 });
